@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python revised</title>
+</head>
+<body>
+<div>
+  <h2>{{var}}</h2>
+
+<!--LOOP USE IN DJANGO-->
+<!--In Django this is the exact style that we use ( control statement  ) -->
+  {% for i in lst %}
+      {{forloop.counter}}
+      {{i}}
+  {% endfor %}
+
+
+<!--CONDITION USE IN DJANGO-->
+<!--In Django this is the exact style that we use ( conditional statement ) --><br><br>
+    {% for i in lst %}
+        {% if i > 20 %}
+            This is {{i}}<br>
+        {% endif %}
+    {% endfor %}
+
+<!--In Django this is the exact style that we use ( conditional statement ) --><br>
+<h1>Simple example</h1>
+    {% if 100 in lst %}
+        Yes available
+    {% else %}
+       Nothing commit (else part is display)
+    {% endif %}
+
+<!--In Django this is the exact style that we use nested ( conditional statement ) --><br>
+    {% if 30 in lst %}
+        {% for i in lst%}
+            {% if i == 40 %}
+                {{i}} is found               <!--output is single time : 10 is found --><br>
+            {% else %}
+                {{i}} is Not found           <!--inner Else part of inner if : output : i is not found --><br>
+            {% endif %}                      <!--endif the outer if condition-->
+        {% endfor %}                             <!--endfor end the for loop control statement-->
+    {% else %}                               <!--outer else part of outer if : output : True  so else no executed--><br>
+        30 is noe not in list pls enter valid number
+    {% endif %}                             <!--endif the outer if condition--><br>
+
+
+</div>
+</body>
+</html>

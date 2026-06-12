@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Base Layout</title>
+</head>
+<body>
+  {% include "top_div_header.html" %}
+
+  {% block middle %}
+  <!-- Child templates will override this -->
+  {% endblock %}
+
+  {% include "top_div_footer.html" %}
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>  <!-- to pass the python file data we use double curly bracket and key name of dict -->
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('banner.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    tr,td {
+    padding:10px;
+    margin:5px;
+    }
+
+    /* Targets <a> inside .active within header and makes background red */
+    header .active a{
+      background:red;
+    } /* There are two way to use or highlight the dynamic link */
+  </style>
+</head>
+<body>
+  <header>
+    <h2>My Website</h2>
+    <nav>
+      <ul> <!--LINK CONNECTING WEB PAGE USING ANCHOR TAG and DJANGO TAG-->
+        {{request.path}} <!--it use to manage the request path -->
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/admin">About</a></li>  <!-- ANCHOR/HTML TAG giving the url name from url.py to navigate-->
+        <li><a href="/pqr">Services</a></li> <!-- -->
+        <li><a href="{% url 'new_admin' %}">Contact</a></li> <!--need to pass value of name parameter in from url.py -->
+      </ul> <!-- URL/DJANGO TAG method to connect the web pages {p url 'name' p}-->
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to My Homepage</h1>
+  </section>
+
+  <div class="container">
+
+    <div class="card">
+      <h3>About Us</h3>
+      <p>{{variable}}</p>   <!-- Try to pass the value to the  templates from views using Django module -->
+    </div>
+
+    <div class="card">
+      <h3>Try For loop using Django</h3>
+      {% for num in tab %}
+      <p>{{forloop.counter0}}  {{num}}</p>  <!--forloop.counter is a predefine function.-->
+      {% endfor %}
+    </div>
+
+    <div class="card">
+      <h3>Our Services</h3>
+      <p>List your services or features here to let visitors know what you offer.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 My Website | All Rights Reserved</p>
+    <span>
+            x = {
+          'x':{
+              'p':[
+                  {'a':1, 'b':2},
+                  {'p':3, 'q':4}
+              ]
+          }
+      }
+      print(x['x']['p'][0]['a'])  # access the value of a
+    </span>
+  </footer>
+
+
+<!--  Now we create the table to under stand for loop using with dict value --><br>
+  <table border="2" cellpadding="15" style="margin-left:50px; border:5px solid black;">
+
+    <tr>
+      <th>Email</th>
+      <th>phone</th>
+     </tr>
+
+    {% for i in details %}
+    <tr>
+      <td>{{i.Email}}</td>
+      <td>{{i.Phone}}</td>
+    </tr>
+    {% endfor %}
+  </table> <br><br>
+
+</body>
+</html>

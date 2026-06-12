@@ -1,0 +1,36 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple HTML Form</title>
+<!--   CSS link -->
+<!--  <link rel="stylesheet" href="/static/CSS/other1page.css">-->
+
+   <!--use to load/address the static folder location-->
+<link rel="stylesheet" href="{% static 'CSS/other1page.css' %}">  <!--django tag ( method to call in html templates ) -->
+
+<!--   JS link -->
+  <script >
+  // Simple check  -> Inline
+  console.log("✅ JS file is attached and running!");
+  alert("✅ JS file is attached and running!");
+  </script>
+<!--<script src="{% static 'js/other1paage.js' %}"></script>-->    <!-- Django tag method to link js to  html templet -->
+
+
+</head>
+<body>
+
+  <!-- Header -->   <!--Practice for django_15_MODULE -->
+  <header style="background:yellow; ">
+    <h1>Welcome to Our Registration Page</h1>
+    <nav>
+      <a href="/">Home</a> |
+      <a href="/about">About</a> |
+      <a href="/contact">Contact</a>
+    </nav>
+    <hr>
+  </header>
+

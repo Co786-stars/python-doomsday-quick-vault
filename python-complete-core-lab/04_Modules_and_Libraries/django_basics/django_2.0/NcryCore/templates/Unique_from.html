@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Form</title>
+    <!-- Link CSS -->
+<!--    <link rel="stylesheet" href="C:\Users\lenovo\OneDrive\Documents\Python 2.0\PyCore-Functional-OOPs-Toolkit\Modules\Module Django\NcryCore\static\CSS\style.css">-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+
+
+</head>
+<body>
+<!--  {p_symbol include "top_div_header.html" p_symbol} if i use this then the header block is included -->
+
+    <div class="container">
+        <h2>{{frmName}}</h2>
+
+        <!-- GET Method Example -->
+        <form action="/search" method="get">
+            <label for="query1">Search (GET):</label>
+            <input type="text" id="query1" name="q1" placeholder="Type something...">
+
+            <label for="query2">Search (GET):</label>
+            <input type="text" id="query2" name="q2" placeholder="Type something...">
+
+            <button type="submit">Submit (GET)</button>
+        </form>
+
+        <hr>
+
+         POST Method Example
+        <form action="/login" method="post">
+            {% csrf_token %}
+            <label for="username">Username (POST):</label>
+            <input type="text" id="username" name="username" placeholder="Enter username">
+
+            <label for="password">Password (POST):</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+
+            <button type="submit">Login (POST)</button>
+        </form>
+    </div>
+</body>
+</html>

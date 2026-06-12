@@ -1,0 +1,19 @@
+"""
+17)) HOLLOW HOURGLASS PATTERN 
+
+* * * * * * * * *       1 2 3 4 5 6 7 8 9        A B C D E F G H I
+  *           *           1           7            A           G
+    *       *               1       5                A       E
+      *   *                   1   3                    A   C
+        *                       1                        A
+      *   *                   1   3                    A   C
+    *       *               1       5                A       E
+  *           *           1           7            A           G
+* * * * * * * * *       1 2 3 4 5 6 7 8 9        A B C D E F G H I 
+"""
+class HollowHourglass:
+    """class body is use to display hollow pattern"""
+    def __init__(self):
+        self.user_input = int(input("Enter Row number for Hollow hourglass : "))
+        self.flod_input = int(input("Enter Row number for floyd pattern : "))
+        self.h_table = int(input("Enter the Row number for horizental table : "))

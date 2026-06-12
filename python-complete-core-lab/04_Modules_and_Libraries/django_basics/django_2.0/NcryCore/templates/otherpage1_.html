@@ -1,0 +1,116 @@
+<!--_________________________________________________________________________________________________-->
+<!--{% load static %}-->
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--<html lang="en">-->
+
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Simple HTML Form</title>-->
+<!--&lt;!&ndash;   CSS link &ndash;&gt;-->
+<!--&lt;!&ndash;  <link rel="stylesheet" href="/static/CSS/other1page.css">&ndash;&gt;-->
+
+<!--   &lt;!&ndash;use to load/address the static folder location&ndash;&gt;-->
+<!--<link rel="stylesheet" href="{% static 'CSS/other1page.css' %}">  &lt;!&ndash;django tag ( method to call in html templates ) &ndash;&gt;-->
+
+<!--&lt;!&ndash;   JS link &ndash;&gt;-->
+<!--  <script >-->
+<!--  // Simple check  -> Inline-->
+<!--  console.log("✅ JS file is attached and running!");-->
+<!--  alert("✅ JS file is attached and running!");-->
+<!--  </script>-->
+<!--&lt;!&ndash;<script src="{% static 'js/other1paage.js' %}"></script>&ndash;&gt;    &lt;!&ndash; Django tag method to link js to  html templet &ndash;&gt;-->
+
+
+<!--</head>-->
+<!--<body>-->
+
+<!--  &lt;!&ndash; Header &ndash;&gt;   &lt;!&ndash;Practice for django_15_MODULE &ndash;&gt;-->
+<!--  <header style="background:yellow; ">-->
+<!--    <h1>Welcome to Our Registration Page</h1>-->
+<!--    <nav>-->
+<!--      <a href="/">Home</a> |-->
+<!--      <a href="/about">About</a> |-->
+<!--      <a href="/contact">Contact</a>-->
+<!--    </nav>-->
+<!--    <hr>-->
+<!--  </header>-->
+<!--_______________________________WE LEARN HOW TO CALL OTHER PAGE USING PYTHON CODE_________________________________-->
+<!--_______________________THAT MEANS HOW TO ADD THE CHILD PAGE TO PARENTS PAGE USING PYTHON TAG_____________________-->
+
+
+<!-- It's link the one page to another page using python tag method like <a></a> -->
+<!--{percentage include "top_div_header.html" percentage}-->
+{% extends 'unique_extend_block.html' %}
+{% block middle %}
+
+  <!--Registration from -->
+  <h2>Registration Form</h2>
+
+  <form action="/submit" method="post">
+
+    <!-- Text input -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <!-- Email input -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Password input -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <!-- Radio buttons -->
+    <p>Gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Checkbox -->
+    <p>Interests:</p>
+    <input type="checkbox" id="coding" name="interests" value="coding">
+    <label for="coding">Coding</label><br>
+    <input type="checkbox" id="music" name="interests" value="music">
+    <label for="music">Music</label><br><br>
+
+    <!-- Dropdown -->
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+      <option value="other">Other</option>
+    </select><br><br>
+
+    <!-- Textarea -->
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Register">
+
+  </form>
+
+
+<!--_____________________________WE LEARN HOW TO CALL OTHER PAGE USING PYTHON CODE___________________________________-->
+<!--_____________________________WE LEARN HOW TO CALL OTHER PAGE USING PYTHON CODE___________________________________-->
+
+<!--  &lt;!&ndash; Footer &ndash;&gt;   &lt;!&ndash;Practice for django_15_MODULE &ndash;&gt;-->
+<!--  <hr>-->
+<!--  <footer style="background:yellow;">-->
+<!--    <p>&copy; 2026 My Website | All Rights Reserved</p>-->
+<!--    <p>Follow us:-->
+<!--      <a href="#">Facebook</a> |-->
+<!--      <a href="#">Twitter</a> |-->
+<!--      <a href="#">Instagram</a>-->
+<!--    </p>-->
+<!--  </footer>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!--_____________________________WE LEARN HOW TO CALL OTHER PAGE USING PYTHON CODE___________________________________-->
+<!--_____________________________WE LEARN HOW TO CALL OTHER PAGE USING PYTHON CODE___________________________________-->
+<!--{percentage include "top_div_footer.html" percentage}-->
+{% endblock %}

@@ -1,0 +1,19 @@
+x = ["vaunt", "brag", "Boast"]
+y  = x.copy()
+print(x)
+
+x = ["vanquish", "conqure", "trounce"]
+copy = list(x)
+print(copy)
+
+
+# possible way to join list 
+
+x = ["titter", "toothsome", "ubiquitous", "vanity"]
+y = ["verity", "venerate", "venerable", "vehement"]
+z = x+y
+
+
+for i in x:
+    x.append(y)
+print(x)
