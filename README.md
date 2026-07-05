@@ -1,4 +1,4 @@
-# python-doomsday-quick-vault
+# ⚙️ python-doomsday-quick-vault
 Packed with datatypea, patterns, logic drills, revision notes, real‑world problem breakdowns, project and other .
 
 🔥 This Python repository is a fully structured end‑to‑end learning ecosystem, designed to take you from absolute basics to advanced, real‑world development. The folder tree is organized with a clean, professional structure that includes everything from beginner‑level A‑to‑Z programs to advanced OOP concepts, functional programming, task‑oriented logic building, and module‑based development.
