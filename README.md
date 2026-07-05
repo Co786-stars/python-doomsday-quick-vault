@@ -3,7 +3,7 @@ Packed with datatypea, patterns, logic drills, revision notes, real‑world prob
 demonstrates a well‑structured Python learning and development environment, showcasing clear progression from fundamentals to advanced concepts.
 repository highlights strong coding discipline through organized folders, consistent practice files, and real‑world problem‑solving exercises. 
 
-<br>
+
 - This Python repository is a fully structured end‑to‑end learning ecosystem, designed to take you from absolute basics to advanced, real‑world development. The folder tree is organized with a clean, professional structure that includes everything from beginner‑level A‑to‑Z programs to advanced OOP concepts, functional programming, task‑oriented logic building, and module‑based development.
 
 - The A_to_z section builds a strong foundation with essential Python basics, covering variables, loops, conditions, functions, and beginner‑friendly logic programs. This is followed by functionalCore, where you explore function‑driven programming, reusable logic, and clean code patterns that improve problem‑solving skills.
