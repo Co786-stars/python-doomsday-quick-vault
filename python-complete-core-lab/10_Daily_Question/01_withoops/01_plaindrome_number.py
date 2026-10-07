@@ -1,11 +1,10 @@
-# Given a number, reverse it and check if the reversed number is equal to the original.
+# Q1. Write a program to check whether a given number is a palindrome using OOPS concept.
 # Explain your approach.
 class Number:
     """class body is try to display the palindrome number"""
     def __init__(self, n):
         """constructor create the attribute"""
         self.n = n
-
 
 class Palindrome(Number):
     """child try to display the num is palindrome or not"""
@@ -37,4 +36,12 @@ except ValueError:
 # But uses extra space, unnecessary attributes, and string conversion ❌
 # Not optimized ❌
 # Docstrings need improvement ❌
+# ---------------------------------------------------------------------------------------------------------------
 
+# Q2. Reverse a number using mathematical operations and check if the reversed number
+#     is equal to the original. Explain the approach.
+
+class Palindrome2(Number):
+    """child try to display the palindrome number without using slice/indexing method"""
+    self.var1 = _
+    def solution(self):
